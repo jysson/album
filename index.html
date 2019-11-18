@@ -66,6 +66,7 @@
 		upLoad.onchange = function() {
 			upFiles.push(upLoad.flies[0]);
 		}
+		test.innerHTML = upFiles;
 		createAlbum.style.display = 'block';
 		createAlbum.onclick = upLoadFile;
 	}else {

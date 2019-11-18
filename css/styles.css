@@ -7,10 +7,8 @@ body{
     height:100%;
 }
 .upLoadBox {
-	/* display: flex; */
 	margin-top: 20px;
 	text-align: center;
-	/* justify-content: center; */
 }
 #createAlbum {
 	display: none;
@@ -19,7 +17,6 @@ body{
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	margin-right: 10px;
 }
 .upLoad span {
 	display: block;

@@ -1,0 +1,62 @@
+.reactBox:nth-of-type(1) div {
+	background-position:center;
+	background: url(../img/mine/psb.jpg);
+	background-size: cover;
+}
+/* 设置其他图片--out */
+.reactBox:nth-of-type(2) div {
+	background-position:center;
+	background: url(../img/mine/psb1.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(3) div {
+	background-position:center;
+	background: url(../img/mine/psb2.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(4) div {
+	background-position:center;
+	background: url(../img/mine/psb3.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(5) div {
+	background-position:center;
+	background: url(../img/mine/psb4.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(6) div {
+	background-position:center;
+	background: url(../img/mine/psb5.jpg);
+	background-size: cover;
+}
+/* 设置其他图片--in */
+.reactBox:nth-of-type(7) div {
+	background-position:center;
+	background: url(../img/mine/psb6.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(8) div {
+	background-position:center;
+	background: url(../img/mine/psb7.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(9) div {
+	background-position:center;
+	background: url(../img/mine/psb8.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(10) div {
+	background-position:center;
+	background: url(../img/mine/psb9.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(11) div {
+	background-position:center;
+	background: url(../img/mine/psb10.jpg);
+	background-size: cover;
+}
+.reactBox:nth-of-type(12) div {
+	background-position:center;
+	background: url(../img/mine/psb11.jpg);
+	background-size: cover;
+}

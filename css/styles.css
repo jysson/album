@@ -60,6 +60,48 @@ body{
 	background: url(../img/timg.jpg);
 	background-size: cover;
 }
+/* 设置其他图片--out */
+/* .out_pic:nth-of-type(2) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.out_pic:nth-of-type(3) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.out_pic:nth-of-type(4) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.out_pic:nth-of-type(5) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.out_pic:nth-of-type(6) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+} */
+/* 设置其他图片--in */
+/* .in_pic:nth-of-type(2) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.in_pic:nth-of-type(3) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.in_pic:nth-of-type(4) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.in_pic:nth-of-type(5) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
+.in_pic:nth-of-type(6) {
+	background: url(../img/timg.jpg);
+	background-size: cover;
+} */
 div .out_pic{
     width:200px;
     height:200px;

@@ -19,41 +19,41 @@
 		</div>
 	</div>
 <div id="react">
-    <div class="out_front out">
-        <img src="./img/timg.jpg" class="out_pic">
+    <div class="out_front out reactBox">
+		<div class="out_pic"></div>
     </div>
-    <div class="out_back out">
-        <img src="./img/timg.jpg" class="out_pic">
+    <div class="out_back out reactBox">
+		<div class="out_pic"></div>
     </div>
-    <div class="out_left out">
-        <img src="./img/timg.jpg" class="out_pic">
+    <div class="out_left out reactBox">
+		<div class="out_pic"></div>
     </div>
-    <div class="out_right out">
-        <img src="./img/timg.jpg" class="out_pic">
+    <div class="out_right out reactBox">
+		<div class="out_pic"></div>
     </div>
-    <div class="out_top out">
-        <img src="./img/timg.jpg" class="out_pic">
+    <div class="out_top out reactBox">
+		<div class="out_pic"></div>
     </div>
-    <div class="out_bottom out">
-        <img src="./img/timg.jpg" class="out_pic">
+    <div class="out_bottom out reactBox">
+		<div class="out_pic"></div>
     </div>
-    <div class="in_front in">
-        <img src="./img/timg.jpg" class="in_pic">
+    <div class="in_front in reactBox">
+		<div class="in_pic"></div>
     </div>
-    <div class="in_back in">
-        <img src="./img/timg.jpg" class="in_pic">
+    <div class="in_back in reactBox">
+		<div class="in_pic"></div>
     </div>
-    <div class="in_left in">
-        <img src="./img/timg.jpg" class="in_pic">
+    <div class="in_left in reactBox">
+		<div class="in_pic"></div>
     </div>
-    <div class="in_right in">
-        <img src="./img/timg.jpg" class="in_pic">
+    <div class="in_right in reactBox">
+		<div class="in_pic"></div>
     </div>
-    <div class="in_top in">
-        <img src="./img/timg.jpg" class="in_pic">
+    <div class="in_top in reactBox">
+		<div class="in_pic"></div>
     </div>
-    <div class="in_bottom in">
-        <img src="./img/timg.jpg" class="in_pic">
+    <div class="in_bottom in reactBox">
+		<div class="in_pic"></div>
     </div>
 </div>
 
@@ -97,7 +97,7 @@
 	}
 	function changeImg(arr) {
 		if(arr.length == upLists.length) {
-			var imgs = document.getElementById('react').getElementsByTagName('div');
+			var imgs = document.getElementById('react').getElementsByClassName('reactBox');
 			var orr = JSON.parse(JSON.stringify(arr));
 			if(arr.length < imgs.length) {
 				var addOrr = Math.ceil(imgs.length/orr.length);
@@ -111,7 +111,8 @@
 				arr = arr.slice(0,-(arr.length-imgs.length));
 			}
 			arr.forEach((item,index)=> {
-				imgs[index].getElementsByTagName('img')[0].src = item;
+				imgs[index].getElementsByTagName('div')[0].style.background = `url(${arr[index]})`;
+				imgs[index].getElementsByTagName('div')[0].style.backgroundSize = 'cover';
 			})
 		}
 	}

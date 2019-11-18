@@ -55,6 +55,11 @@ body{
     position:absolute;
     transition: all .4s;
 }
+.out_pic,.in_pic {
+	background-position:center;
+	background: url(../img/timg.jpg);
+	background-size: cover;
+}
 div .out_pic{
     width:200px;
     height:200px;

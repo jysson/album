@@ -16,7 +16,7 @@ body{
 }
 .upLoad {
 	position: relative;
-	display: inline-block;
+	display: inherit;
 	overflow: hidden;
 }
 .upLoad span {

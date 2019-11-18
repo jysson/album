@@ -11,7 +11,7 @@ body{
 	text-align: center;
 }
 #createAlbum {
-	display: none;
+	opacity: 0;
 }
 .upLoad {
 	position: relative;

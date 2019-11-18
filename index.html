@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link type="text/css"  href="./css/styles.css" rel="stylesheet">
+    <title>旋转立方体相册</title>
+</head>
+<body>
+	<div class="txt-center">
+		<div class="upLoad">
+			<button class="upLoadBtn">上传</button>
+			<input type="file" id="upLoad" multiple>
+		</div>
+	</div>
+<div id="react">
+    <div class="out_front out">
+        <img src="./img/timg.jpg" class="out_pic">
+    </div>
+    <div class="out_back out">
+        <img src="./img/timg.jpg" class="out_pic">
+    </div>
+    <div class="out_left out">
+        <img src="./img/timg.jpg" class="out_pic">
+    </div>
+    <div class="out_right out">
+        <img src="./img/timg.jpg" class="out_pic">
+    </div>
+    <div class="out_top out">
+        <img src="./img/timg.jpg" class="out_pic">
+    </div>
+    <div class="out_bottom out">
+        <img src="./img/timg.jpg" class="out_pic">
+    </div>
+    <div class="in_front in">
+        <img src="./img/timg.jpg" class="in_pic">
+    </div>
+    <div class="in_back in">
+        <img src="./img/timg.jpg" class="in_pic">
+    </div>
+    <div class="in_left in">
+        <img src="./img/timg.jpg" class="in_pic">
+    </div>
+    <div class="in_right in">
+        <img src="./img/timg.jpg" class="in_pic">
+    </div>
+    <div class="in_top in">
+        <img src="./img/timg.jpg" class="in_pic">
+    </div>
+    <div class="in_bottom in">
+        <img src="./img/timg.jpg" class="in_pic">
+    </div>
+</div>
+
+<script>
+	var upLoad = document.getElementById('upLoad');
+	var imgArr = [];
+	upLoad.onchange = function() {
+		imgArr = [];
+		var upLists = upLoad.files;
+		for(let i=0;i<upLists.length;i++) {
+			base64(upLists[i])
+		}
+	}
+	function base64(file) {
+		var reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onloadend = function () {      
+			var dataURL = reader.result;
+			imgArr.push(dataURL);
+			changeImg(imgArr)
+		};
+	}
+	function changeImg(arr) {
+		if(arr.length == upLoad.files.length) {
+			var imgs = document.getElementById('react').getElementsByTagName('div');
+			var orr = JSON.parse(JSON.stringify(arr));
+			if(arr.length < imgs.length) {
+				var addOrr = Math.ceil(imgs.length/orr.length);
+				for(var i=0;i<addOrr;i++) {
+					arr = arr.concat(orr);
+				}
+				if(arr.length > imgs.length) {
+					arr = arr.slice(0,-(arr.length-imgs.length));
+				}
+			}else if(arr.length > imgs.length) {
+				arr = arr.slice(0,-(arr.length-imgs.length));
+			}
+			arr.forEach((item,index)=> {
+				imgs[index].getElementsByTagName('img')[0].src = item;
+			})
+		}
+	}
+</script>
+</body>
+</html>

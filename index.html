@@ -62,6 +62,7 @@
 	test.innerHTML = isAnd;
 	var imgArr = [];
 	var upFiles = [];
+	var upLists = [];
 	if(isAnd) {
 		upLoad.onchange = function() {
 			upFiles.push(upLoad.flies[0]);
@@ -74,7 +75,7 @@
 	}
 	function upLoadFile() {
 		imgArr = [];
-		var upLists = upFiles.length?upFiles:upLoad.files;
+		upLists = upFiles.length?upFiles:upLoad.files;
 		if(upLoad.files) {
 			for(let i=0;i<upLists.length;i++) {
 				base64(upLists[i])
@@ -94,7 +95,7 @@
 		};
 	}
 	function changeImg(arr) {
-		if(arr.length == upLoad.files.length) {
+		if(arr.length == upLists.length) {
 			var imgs = document.getElementById('react').getElementsByTagName('div');
 			var orr = JSON.parse(JSON.stringify(arr));
 			if(arr.length < imgs.length) {

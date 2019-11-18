@@ -6,11 +6,13 @@
     <title>旋转立方体相册</title>
 </head>
 <body>
-	<div class="txt-center">
+	<div class="upLoadBox">
 		<div class="upLoad">
-			<button class="upLoadBtn">上传</button>
-			<input type="file" id="upLoad" multiple>
+			<button class="upLoadBtn">上传图片</button>
+			<input type="file" id="upLoad" multiple accept="image/*">
+			<span>（最多可上传12张）</span>
 		</div>
+		<button class="upLoadBtn" id="createAlbum">生成相册</button>
 	</div>
 <div id="react">
     <div class="out_front out">
@@ -52,14 +54,31 @@
 </div>
 
 <script>
+	var isAnd = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
 	var upLoad = document.getElementById('upLoad');
+	var createAlbum = document.getElementById('createAlbum');
 	var imgArr = [];
-	upLoad.onchange = function() {
-		imgArr = [];
-		var upLists = upLoad.files;
-		for(let i=0;i<upLists.length;i++) {
-			base64(upLists[i])
+	var upFiles = [];
+	if(isAnd) {
+		upLoad.onchange = function() {
+			upFiles.push(upLoad.flies[0]);
 		}
+		createAlbum.style.display = 'block';
+		createAlbum.onclick = upLoadFile;
+	}else {
+		upLoad.onchange = upLoadFile;
+	}
+	function upLoadFile() {
+		imgArr = [];
+		var upLists = upFiles.length?upFiles:upLoad.files;
+		if(upLoad.files) {
+			for(let i=0;i<upLists.length;i++) {
+				base64(upLists[i])
+			}
+		}else {
+			alert('请选择图片！')
+		}
+		
 	}
 	function base64(file) {
 		var reader = new FileReader();

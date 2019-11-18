@@ -7,9 +7,10 @@ body{
     height:100%;
 }
 .upLoadBox {
-	display: flex;
+	/* display: flex; */
 	margin-top: 20px;
-	justify-content: center;
+	text-align: center;
+	/* justify-content: center; */
 }
 #createAlbum {
 	display: none;

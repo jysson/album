@@ -14,6 +14,7 @@
 		</div>
 		<button class="upLoadBtn" id="createAlbum">生成相册</button>
 	</div>
+	<div id="test"></div>
 <div id="react">
     <div class="out_front out">
         <img src="./img/timg.jpg" class="out_pic">
@@ -55,8 +56,10 @@
 
 <script>
 	var isAnd = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+	var test = document.getElementById('test');
 	var upLoad = document.getElementById('upLoad');
 	var createAlbum = document.getElementById('createAlbum');
+	test.innerHTML = isAnd;
 	var imgArr = [];
 	var upFiles = [];
 	if(isAnd) {

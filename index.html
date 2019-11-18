@@ -14,7 +14,6 @@
 		</div>
 		<button class="upLoadBtn" id="createAlbum">生成相册</button>
 	</div>
-	<div id="test"></div>
 <div id="react">
     <div class="out_front out">
         <img src="./img/timg.jpg" class="out_pic">
@@ -59,15 +58,13 @@
 	var test = document.getElementById('test');
 	var upLoad = document.getElementById('upLoad');
 	var createAlbum = document.getElementById('createAlbum');
-	test.innerHTML = isAnd;
 	var imgArr = [];
 	var upFiles = [];
 	var upLists = [];
 	if(isAnd) {
 		upLoad.onchange = function() {
-			upFiles.push(upLoad.flies[0]);
+			upFiles.push(upLoad.files[0]);
 		}
-		test.innerHTML = upFiles;
 		createAlbum.style.display = 'block';
 		createAlbum.onclick = upLoadFile;
 	}else {

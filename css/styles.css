@@ -12,7 +12,6 @@ body{
 }
 #createAlbum {
 	display: none;
-	transform: translateY(-30px);
 }
 .upLoad {
 	position: relative;
